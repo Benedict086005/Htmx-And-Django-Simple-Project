@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+
+</div>
+{% block content %}
+
+<div class="container-fluid justify-content-center m-2">
+  
+<div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Names From the Backend</h5>
+    <p class="card-text" id='names'></p>
+    <button hx-get="{% url 'students' %}" hx-target='#names' hx-trigger ='load delay:5s'  class="btn btn-primary">Check names</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+</div>
+{% endblock %}
+
